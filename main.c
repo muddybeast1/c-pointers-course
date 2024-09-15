@@ -191,26 +191,60 @@ void main() {
 
 
 
-    struct my_struct var = {
-        .a = 1024,
-        .b = 2.5,
-        .c = -1
-    };
+    // struct my_struct var = {
+    //     .a = 1024,
+    //     .b = 2.5,
+    //     .c = -1
+    // };
 
-    struct my_struct *ptr = &var;
+    // struct my_struct *ptr = &var;
 
-    (*ptr).a = (*ptr).a + 1;
-    (*ptr).b = (*ptr).b + 1;
-    (*ptr).c = (*ptr).c + 2;
+    // (*ptr).a = (*ptr).a + 1;
+    // (*ptr).b = (*ptr).b + 1;
+    // (*ptr).c = (*ptr).c + 2;
 
-    printf("var.a: %lld, var.b: %f, var.c: %d\n", var.a, var.b, var.c);
-    printf("(*ptr).a: %lld, (*ptr).b: %f, (*ptr).c: %d\n\n", (*ptr).a, (*ptr).b, (*ptr).c);
+    // printf("var.a: %lld, var.b: %f, var.c: %d\n", var.a, var.b, var.c);
+    // printf("(*ptr).a: %lld, (*ptr).b: %f, (*ptr).c: %d\n\n", (*ptr).a, (*ptr).b, (*ptr).c);
 
-    ptr->a = ptr->a + 1;
-    ptr->b = ptr->b + 1;
-    ptr->c = ptr->c + 2;
+    // ptr->a = ptr->a + 1;
+    // ptr->b = ptr->b + 1;
+    // ptr->c = ptr->c + 2;
 
-    printf("var.a: %lld, var.b: %f, var.c: %d\n", var.a, var.b, var.c);
-    printf("ptr->a: %lld, ptr->b: %f, ptr->c: %d\n", ptr->a, ptr->b, ptr->c);
-    printf("(*ptr).a: %lld, (*ptr).b: %f, (*ptr).c: %d\n", (*ptr).a, (*ptr).b, (*ptr).c);
+    // printf("var.a: %lld, var.b: %f, var.c: %d\n", var.a, var.b, var.c);
+    // printf("ptr->a: %lld, ptr->b: %f, ptr->c: %d\n", ptr->a, ptr->b, ptr->c);
+    // printf("(*ptr).a: %lld, (*ptr).b: %f, (*ptr).c: %d\n", (*ptr).a, (*ptr).b, (*ptr).c);
+
+
+
+
+
+
+
+
+
+    char a[3] = {'A', 'B', 'C'};
+    int b[3] = {10, 11, 12};
+    short int c[3] = {20, 21, 22};
+
+    char *pa = a;
+    int *pb = b;
+    short int *pc = &c[1];
+
+    printf("\nMath on char pointer!\n");
+    printf("pa   = %p\n", pa);
+    printf("pa+0 = %p : *(pa+0) = %c, pa[0] = %c\n", pa+0, *(pa+0), pa[0]);
+    printf("pa+1 = %p : *(pa+1) = %c, pa[1] = %c\n", pa+1, *(pa+1), pa[1]);
+    printf("pa+2 = %p : *(pa+2) = %c, pa[2] = %c\n", pa+2, *(pa+2), pa[2]);
+
+    printf("\nMath on int pointer!\n");
+    printf("pb   = %p\n", pb);
+    printf("pb+0 = %p : *(pb+0) = %d, pb[0] = %d\n", pb+0, *(pb+0), pb[0]);
+    printf("pb+1 = %p : *(pb+1) = %d, pb[1] = %d\n", pb+1, *(pb+1), pb[1]);
+    printf("pb+2 = %p : *(pb+2) = %d, pb[2] = %d\n", pb+2, *(pb+2), pb[2]);
+
+    printf("\nMath on short int pointer!\n");
+    printf("pc   = %p\n", pc);
+    printf("pc+0 = %p : *(pc+0) = %d, pc[0] = %d\n", pc+0, *(pc+0), pc[0]);
+    printf("pc-1 = %p : *(pc-1) = %d, pc[-1] = %d\n", pc-1, *(pc-1), pc[-1]);
+    printf("pc+1 = %p : *(pc+1) = %d, pc[1] = %d\n", pc+1, *(pc+1), pc[1]);
 }
