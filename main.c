@@ -8,15 +8,17 @@
 //     int c;
 // };
 
-void function_1()
+void function_1(int a)
 {
-    printf("function_1()\n");
+    printf("function_1(): a=%d\n", a);
 }
 
-void function_2()
+void function_2(int b)
 {
-    printf("function_2()\n");
+    printf("function_2(): b=%d\n", b);
 }
+
+typedef void (*func_ptr)();
 
 void main() {
     // char c = 'A';
@@ -267,11 +269,12 @@ void main() {
 
 
 
-    void (*func_ptr)();
+    func_ptr pf;
 
-    func_ptr = function_1;
-    func_ptr();
+    pf = function_1;
+    pf(10);
 
-    func_ptr = function_2;
-    func_ptr();
+    func_ptr qf;
+    qf = &function_2;
+    qf(20);
 }
