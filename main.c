@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <malloc.h>
+#include <stdlib.h>
+
 // #include "math_library.h"
 
 // struct my_struct
@@ -299,11 +301,37 @@ void main() {
 
 
 
-    int i = 10;
+    // int i = 10;
 
-    void *pi = &i;
+    // void *pi = &i;
 
-    printf("pi: %p, &i: %p\n", pi, &i);
-    // printf("*pi: %d\n", *pi);
-    printf("*pi: %d\n", *(int *)pi);
+    // printf("pi: %p, &i: %p\n", pi, &i);
+    // // printf("*pi: %d\n", *pi);
+    // printf("*pi: %d\n", *(int *)pi);
+
+
+
+
+
+
+
+
+    // int *p = NULL;
+    // printf("%p, 0x%llu\n", NULL, (long long unsigned int)NULL);
+    // printf("%p, %d\n", p, *p);
+
+
+
+
+
+
+
+
+    int *p = (int *)malloc(4);
+
+    printf("before: %d\n", *p);
+    *p = 4;
+    printf("after: %d\n", *p);
+
+    free(p);
 }
