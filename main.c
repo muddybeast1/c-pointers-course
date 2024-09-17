@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <malloc.h>
+#include "math_library.h"
 
 // struct my_struct
 // {
@@ -8,17 +9,17 @@
 //     int c;
 // };
 
-void function_1(int a)
-{
-    printf("function_1(): a=%d\n", a);
-}
+// void function_1(int a)
+// {
+//     printf("function_1(): a=%d\n", a);
+// }
 
-void function_2(int b)
-{
-    printf("function_2(): b=%d\n", b);
-}
+// void function_2(int b)
+// {
+//     printf("function_2(): b=%d\n", b);
+// }
 
-typedef void (*func_ptr)();
+// typedef void (*func_ptr)();
 
 void main() {
     // char c = 'A';
@@ -269,12 +270,24 @@ void main() {
 
 
 
-    func_ptr pf;
+    // func_ptr pf;
 
-    pf = function_1;
-    pf(10);
+    // pf = function_1;
+    // pf(10);
 
-    func_ptr qf;
-    qf = &function_2;
-    qf(20);
+    // func_ptr qf;
+    // qf = &function_2;
+    // qf(20);
+
+
+
+
+
+
+
+
+    execute_function(ADD, 100, 5);
+    execute_function(SUB, 100, 5);
+    execute_function(MUL, 100, 5);
+    execute_function(DIV, 100, 5);
 }
