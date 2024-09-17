@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <malloc.h>
-#include "math_library.h"
+// #include "math_library.h"
 
 // struct my_struct
 // {
@@ -286,8 +286,24 @@ void main() {
 
 
 
-    execute_function(ADD, 100, 5);
-    execute_function(SUB, 100, 5);
-    execute_function(MUL, 100, 5);
-    execute_function(DIV, 100, 5);
+    // execute_function(ADD, 100, 5);
+    // execute_function(SUB, 100, 5);
+    // execute_function(MUL, 100, 5);
+    // execute_function(DIV, 100, 5);
+
+
+
+
+
+
+
+
+
+    int i = 10;
+
+    void *pi = &i;
+
+    printf("pi: %p, &i: %p\n", pi, &i);
+    // printf("*pi: %d\n", *pi);
+    printf("*pi: %d\n", *(int *)pi);
 }
