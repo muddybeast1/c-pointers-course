@@ -333,5 +333,7 @@ void main() {
     *p = 4;
     printf("after: %d\n", *p);
 
+    printf("p: %p\n", p);
+    
     free(p);
 }
